@@ -1,0 +1,317 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 1em;
+}
+
+/* --- Hero Banner --- */
+.hero { 
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 3em;
+  text-align: left;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('Pro_Des.webp');
+  background-size: cover;
+  background-position: center 10%;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.hero-content {
+  z-index: 1;
+  transform: translateY(-0.9375em);
+}
+
+.hero-name {
+  position: relative;
+  font-size: 3em;
+  transform: translateY(-0.9375em);
+}
+
+.hero-content p {
+  font-size: 1.04375em;
+}
+
+/* === ANIMATIONS === */
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-3.125em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomHero {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+  max-width: 37.5em;
+  animation: fadeInSlide 1.2s ease forwards;
+}
+
+.hero::before {
+  animation: zoomHero 8s ease-in-out infinite alternate;
+}
+
+/* --- Nav Bar --- */
+html {
+  scroll-behavior: smooth;
+}
+
+#main-nav {
+  position: absolute;
+  top: 1.875em;
+  right: 2.5em;
+  z-index: 3;
+  transition: background 0.3s ease, padding 0.3s ease;
+}
+
+#main-nav ul {
+  display: flex;
+  gap: 1.5em;
+}
+
+#main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#main-nav a:hover,
+#main-nav a.active-link {
+  text-decoration: underline;
+}
+
+#main-nav.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.75em 1.5em;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+#main-nav.sticky ul {
+  justify-content: center;
+}
+
+#main-nav.sticky a {
+  color: #fff;
+}
+
+#main-nav a.active-link {
+  color: #520101;
+}
+
+/* --- Nav Overlay --- */
+nav {
+  position: absolute;
+  top: 1.875em;
+  right: 2.5em;
+  z-index: 3;
+}
+
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9375em;
+}
+
+nav a:hover {
+  font-size: 1.0625em;
+  transition: 0.7s ease in out;
+}
+
+/* --- Main Sections --- */
+main {
+  padding: 2.5em;
+}
+
+section {
+  max-width: 60em;
+  margin: auto;
+  margin-bottom: 3em;
+}
+
+section h2 {
+  color: #004080;
+  margin-bottom: 0.625em;
+}
+
+ul {
+  padding-left: 1.0625em;
+}
+
+/* Skills */
+.blocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13.75em, 1fr));
+  gap: 1.25em;
+  margin-top: 1.25em;
+}
+
+.block {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1em 1.25em;
+  border-radius: 0.75em;
+  color: #000000;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1em;
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.block:hover {
+  transform: translateY(-0.375em);
+  box-shadow: 0 0.5em 1.25em rgba(0, 0, 0, 0.2);
+}
+
+/* Experience / Education / Projects */
+article {
+  margin-bottom: 1.5em;
+}
+
+article h3 {
+  color: #222;
+  margin-bottom: 0.3em;
+}
+
+article em {
+  color: #666;
+  font-size: 0.9em;
+}
+
+/* Contact Section */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 2em 1em;
+}
+
+#contact-form label {
+  font-weight: bold;
+  margin-bottom: 0.25em;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 0.625em;
+  border: 1px solid #ccc;
+  border-radius: 0.375em;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#contact-form textarea {
+  resize: vertical;
+  min-height: 7.5em;
+}
+
+#contact-form button {
+  background-color: #004080;
+  color: white;
+  padding: 0.625em 1.25em;
+  border: none;
+  border-radius: 0.375em;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #eee;
+  color: #555;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5em;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1em;
+    border-radius: 0.625em;
+  }
+
+  nav {
+    right: 0.625em;
+    top: 1.25em;
+  }
+}
+
+/* --Scroll Reaveal-- */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(2.5em);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --Blurring The active selection-- */
+.section {
+  filter: blur(3px);
+  opacity: 0.2;
+  transform: scale(0.98);
+  transition: filter 0.6s ease, opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.active-section {
+  filter: blur(0);
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
