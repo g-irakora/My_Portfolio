@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }, {
-    threshold: 0.3,
+    threshold: 0.5,
     rootMargin: "-10% 0px"
   });
   sections.forEach(sec => sectionObserver.observe(sec));

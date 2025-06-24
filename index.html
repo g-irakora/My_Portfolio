@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IRAKORA DES GASANA- Resume</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Des Gasana - Aspiring Software Developer and Future Leader. Portfolio showcasing skills in web development, programming, and professional experience.">
+  <meta name="keywords" content="Des Gasana, Software Developer, Web Development, Python, JavaScript, HTML, CSS">
+  <meta name="author" content="Des Gasana">
+  <title>IRAKORA DES GASANA - Resume</title>
+  <!-- Link CSS externally -->
   <link rel="stylesheet" href="summative_styles.css" />
 </head>
 <body>
-
+  <!-- Loading Screen -->
+  <div class="loading-overlay" id="loading">
+    <div class="spinner"></div>
+  </div>
+ 
+  <!-- hero section -->
   <header class="hero">
     <nav id="main-nav">
-      <ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul id="nav-menu">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
@@ -20,113 +34,144 @@
       </ul>
     </nav>
     <div class="hero-content">
-      <h1 class=" hero-name">Des Gasana</h1>
-      <p>Aspiring Developer & Future Leader</p>
+      <h1 class="hero-name">Des Gasana</h1>
+      <p>Aspiring Software Developer & Future Leader</p>
+      <a href="#about" class="hero-cta">Discover My Journey</a>
+    </div>
+    <div class="hero-image">
+      <img src="Pro_Des.webp" alt="Des Gasana - Professional Portrait" loading="lazy">
     </div>
   </header>
+
   <main>
 
+    <!-- About me -->
     <section id="about" class="section scroll-reveal">
       <h2>About Me</h2>
-      <p>Motivated and detail-oriented professional with a strong foundation in administrative support, 
+      <p>
+        Motivated and detail-oriented professional with a strong foundation in administrative support, 
         data management, and customer service. Skilled in accurate data entry, clear communication, and 
         collaborating effectively within team environments. Proficient in using digital tools and systems 
         to manage, track, and update operational data. Known for a methodical approach, strong organizational 
         skills, and a commitment to delivering reliable results.
+        <br><br>
         Passionate software developer pursuing a career at African Leadership University, dedicated to 
         leveraging technology to create impactful solutions and drive innovation.
-
-</p>
-</section>
-    <section id="skills" class="section scroll-reveal">
-      <h2>Skills</h2>
-      <div class="blocks">
-    <div class="block">Excellent Communication Skills</div>
-    <div class="block">Experienced with ISHYIGA software</div>
-    <div class="block">Website Development: HTML, CSS, JavaScript</div>
-    <div class="block">Programming: Python & C++</div>
-    <div class="block">Quick Learner</div>
-    <div class="block">Driving Skills</div>
-    <div class="block">Accurate & Efficient Data Entry</div>
-    <div class="block">Analytical & Numerical Skills</div>
-    <div class="block">Time Management & Organization</div>
-    <div class="block">Confidentiality & Professionalism</div>
-  </div>
+      </p>
     </section>
 
-    <section id="experience" class= "section scroll-reveal">
+    <!-- My skills -->
+    <section id="skills" class="section scroll-reveal">
+      <h2>Skills & Expertise</h2>
+      <div class="blocks">
+        <div class="block">Excellent Communication Skills</div>
+        <div class="block">Experienced with ISHYIGA Software</div>
+        <div class="block">Website Development: HTML, CSS, JavaScript</div>
+        <div class="block">Programming: Python & C++</div>
+        <div class="block">Quick Learner & Adaptable</div>
+        <div class="block">Professional Driving Skills</div>
+        <div class="block">Accurate & Efficient Data Entry</div>
+        <div class="block">Analytical & Numerical Skills</div>
+        <div class="block">Time Management & Organization</div>
+        <div class="block">Confidentiality & Professionalism</div>
+      </div>
+    </section>
+
+    <!-- My experience -->
+    <section id="experience" class="section scroll-reveal">
       <h2>Work Experience</h2>
       <article>
-        <h3>Financial Data Entry Clerk & Cashier - Teta Pharmacy</h3>
-        <p><em>March 2024- Present</em></p>
-        <p>Accurately entered financial data, including income, expenses, and payments from insurers, 
-           into digital platforms, ensuring data integrity and timely updates.
-           Handled cash transactions, verified client payments and ensuring all transactions 
-           were properly recorded.
-</p>
+        <h3>Financial Data Entry Clerk & Cashier</h3>
+        <em>Teta Pharmacy • March 2024 - Present</em>
+        <p>
+          Accurately entered financial data, including income, expenses, and payments from insurers, 
+          into digital platforms, ensuring data integrity and timely updates. Handled cash transactions, 
+          verified client payments and ensured all transactions were properly recorded.
+        </p>
       </article>
       <article>
-        <h3>Customer Support and Team Leadership - Teta Pharmacy</h3>
-        <p><em>December 2024- Present</em></p>
-        <p>Delivered excellent customer service, leading to a promotion to lead the Customer Service
-            Team at the main branch, demonstrating strong leadership and teamwork.
-            Developed strong skills in adaptability, problem-solving, and customer satisfaction.
-</p>
+        <h3>Customer Support and Team Leadership</h3>
+        <em>Teta Pharmacy • December 2024 - Present</em>
+        <p>
+          Delivered excellent customer service, leading to a promotion to lead the Customer Service
+          Team at the main branch, demonstrating strong leadership and teamwork capabilities.
+          Developed strong skills in adaptability, problem-solving, and customer satisfaction.
+        </p>
       </article>
     </section>
 
-    <section id="education" class= "section scroll-reveal">
+
+    <!-- Education -->
+    <section id="education" class="section scroll-reveal">
       <h2>Education</h2>
       <article>
-        <h3>Bachelor of Software Engineering Honours, African Leadership University</h3>
-        <p><em>2024-Present</em></p>
+        <h3>Bachelor of Software Engineering Honours</h3>
+        <em>African Leadership University • 2024 - Present</em>
+        <p>
+          Currently pursuing a comprehensive software engineering degree with focus on modern 
+          development practices, algorithms, and innovative problem-solving approaches.
+        </p>
       </article>
       <article>
-        <h3>Diploma in Mathematics,Physics and Computer Science, College Saint Andre</h3>
-        <p><em>2017-2023</em></p>
+        <h3>Diploma in Mathematics, Physics and Computer Science</h3>
+        <em>College Saint Andre • 2017 - 2023</em>
+        <p>
+          Strong foundation in STEM subjects with particular emphasis on mathematical reasoning, 
+          scientific methodology, and early computer science principles.
+        </p>
       </article>
     </section>
 
-    <section id="projects" class= "section scroll-reveal">
-      <h2>Projects</h2>
+    <!-- projects -->
+    <section id="projects" class="section scroll-reveal">
+      <h2>Projects & Portfolio</h2>
       <article>
-        <h3>Personal Blog</h3>
-        <div class="block">
-  <a href="Summative_Project.html" style="color: inherit; text-decoration: none;">
-    Visit My Blog
-  </a>
-</div>
-
+        <h3>Personal Blog & Portfolio</h3>
+        <p>
+          A comprehensive showcase of my development journey, featuring responsive design, 
+          modern web technologies, and engaging user experience.
+        </p>
+        <div class="project-link">
+          <a href="#" class="block">Explore My Work</a>
+        </div>
       </article>
-      
     </section>
 
+    <!-- Contact me section -->
     <section id="contact" class="section scroll-reveal">
-      <h2>Contact</h2>
-      <address>
-        Email: <a href="mailto:g.irakora@alustudent.com">g.irakora@alustudent.com</a><br />
-        Phone: +250790349920<br />
-        LinkedIn: <a href="https://www.linkedin.com/in/des-gasana-687964295/" target="_blank" rel="noopener">Des Gasana</a>
-      </address>
-      <form id="contact-form" action="#" method="post">
-        <label for="name">Name:</label>
-        <input placeholder="John Baptist" type="text" id="name" name="name" required />
+      <h2>Let's Connect</h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Get In Touch</h3>
+          <address>
+            <div>Email: <a href="mailto:g.irakora@alustudent.com">g.irakora@alustudent.com</a></div>
+            <div>Phone: <a href="tel:+250790349920">+250 790 349 920</a></div>
+            <div>LinkedIn: <a href="https://www.linkedin.com/in/des-gasana-687964295/" target="_blank" rel="noopener noreferrer">Des Gasana</a></div>
+          </address>
+        </div>
+        
+        <form id="contact-form" action="#" method="post">
+          <h3>Send Message</h3>
+          <label for="name">Full Name</label>
+          <input placeholder="John Baptist" type="text" id="name" name="name" required>
 
-        <label for="email">Email:</label>
-        <input placeholder="example@youremail.com" type="email" id="email" name="email" required />
-        <label for="message">Message:</label>
-        <textarea placeholder="Send Des Gasana a Message" id="message" name="message" rows="3" required></textarea><br />
+          <label for="email">Email Address</label>
+          <input placeholder="example@youremail.com" type="email" id="email" name="email" required>
+          
+          <label for="message">Your Message</label>
+          <textarea placeholder="Tell me about your project or just say hello!" id="message" name="message" rows="5" required></textarea>
 
-        <button type="submit">Send</button>
-      </form>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
     </section>
-
   </main>
 
   <footer>
     <p>&copy; 2025 Des Gasana. All rights reserved.</p>
   </footer>
 
+<!-- Link javascript externally -->
   <script src="summative_scripts.js"></script>
 </body>
 </html>
