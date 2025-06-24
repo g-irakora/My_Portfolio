@@ -168,9 +168,11 @@ main {
 }
 
 section {
-  max-width: 60em;
-  margin: auto;
-  margin-bottom: 3em;
+  min-height: 100vh;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3em 2em;  
 }
 
 section h2 {
