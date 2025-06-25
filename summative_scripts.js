@@ -1,3 +1,5 @@
+// Javascript
+
 document.addEventListener("DOMContentLoaded", function () {
   // Remove loading screen
   setTimeout(() => {
@@ -120,17 +122,21 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
       const targetId = this.getAttribute('href').substring(1);
       const targetSection = document.getElementById(targetId);
-      
+  
       if (targetSection) {
-        const offsetTop = targetSection.offsetTop - (nav.classList.contains('sticky') ? 80 : 0);
-        
+        const navHeight = nav.offsetHeight;
+        const sectionTop = targetSection.getBoundingClientRect().top + window.pageYOffset;
+  
+        const scrollTo = sectionTop - navHeight;
+  
         window.scrollTo({
-          top: offsetTop,
+          top: scrollTo,
           behavior: 'smooth'
         });
       }
     });
   });
+  
 
   // Contact form handling
   const contactForm = document.getElementById('contact-form');
